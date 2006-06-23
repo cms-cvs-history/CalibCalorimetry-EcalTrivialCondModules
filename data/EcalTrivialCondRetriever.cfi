@@ -1,1 +1,8 @@
-es_source = EcalTrivialConditionRetriever { }
+ es_source = EcalTrivialConditionRetriever {
+        untracked bool producedEcalWeights = true
+        untracked bool producedEcalPedestals = true
+        untracked bool producedEcalIntercalibConstants = true
+        untracked bool producedEcalGainRatios = true
+        untracked bool producedEcalADCToGeVConstant = true
+ }
+
