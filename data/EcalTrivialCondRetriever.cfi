@@ -4,5 +4,7 @@
         untracked bool producedEcalIntercalibConstants = true
         untracked bool producedEcalGainRatios = true
         untracked bool producedEcalADCToGeVConstant = true
+	untracked bool weightsForTB = false
+	untracked bool getWeightsFromFile = false
  }
 
