@@ -5,7 +5,7 @@
         untracked bool producedEcalGainRatios = true
         untracked bool producedEcalADCToGeVConstant = true
 	untracked bool weightsForTB = false
-	untracked bool getWeightsFromFile = false
+	untracked bool getWeightsFromFile = true
 #	untracked string amplWeightsFile = "CalibCalorimetry/EcalTrivialCondModules/data/ampWeights_TB.txt"
  }
 
