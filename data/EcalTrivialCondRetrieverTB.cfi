@@ -1,9 +1,9 @@
  es_source = EcalTrivialConditionRetriever {
-        untracked bool producedEcalWeights = true
-        untracked bool producedEcalPedestals = true
-        untracked bool producedEcalIntercalibConstants = true
-        untracked bool producedEcalGainRatios = true
-        untracked bool producedEcalADCToGeVConstant = true
+        untracked bool produceEcalWeights = true
+        untracked bool produceEcalPedestals = true
+        untracked bool produceEcalIntercalibConstants = true
+        untracked bool produceEcalGainRatios = true
+        untracked bool produceEcalADCToGeVConstant = true
 	untracked bool weightsForTB = true
 #       If set true reading optimized weights (3+5 weights) from file 
 	untracked bool getWeightsFromFile = true

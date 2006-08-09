@@ -1,15 +1,21 @@
- es_source = EcalTrivialConditionRetriever {
-        untracked bool producedEcalWeights = true
-        untracked bool producedEcalPedestals = true
-        untracked bool producedEcalIntercalibConstants = true
-        untracked bool producedEcalGainRatios = true
-        untracked bool producedEcalADCToGeVConstant = true
-	untracked bool weightsForTB = false
+es_source = EcalTrivialConditionRetriever {
+        untracked bool produceEcalWeights = true
+        untracked bool produceEcalPedestals = true
+        untracked bool produceEcalIntercalibConstants = true
+        untracked bool produceEcalGainRatios = true
+        untracked bool produceEcalADCToGeVConstant = true
+        untracked bool weightsForTB = false
+
 #       If set true reading optimized weights (3+5 weights) from file 
-	untracked bool getWeightsFromFile = true
+        untracked bool getWeightsFromFile = true
+
 #       Values to get correct noise on RecHit amplitude using 3+5 weights
         untracked double EBpedRMSX12 = 1.26
         untracked double EEpedRMSX12 = 2.87
-#	untracked string amplWeightsFile = "CalibCalorimetry/EcalTrivialCondModules/data/ampWeights_TB.txt"
- }
+#       untracked string amplWeightsFile = "CalibCalorimetry/EcalTrivialCondModules/data/ampWeights_TB.txt"
 
+       ## file with intercalib constants - same format used for online and offline DB
+       # by default set all inter calib const to 1.0 if no file provided
+       untracked string  intercalibConstantsFile = ""
+
+}
