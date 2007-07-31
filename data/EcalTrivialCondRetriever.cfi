@@ -4,6 +4,8 @@ es_source = EcalTrivialConditionRetriever {
         untracked bool producedEcalIntercalibConstants = true
         untracked bool producedEcalGainRatios = true
         untracked bool producedEcalADCToGeVConstant = true
+	untracked bool producedEcalLaserCorrection = true
+
         untracked bool weightsForTB = false
 
 #       If set true reading optimized weights (3+5 weights) from file 
@@ -12,6 +14,8 @@ es_source = EcalTrivialConditionRetriever {
 #       Values to get correct noise on RecHit amplitude using 3+5 weights
         untracked double EBpedRMSX12 = 1.26
         untracked double EEpedRMSX12 = 2.87
+        untracked double laserAPDPNRefMean = 1.0
+        untracked double laserAPDPNMean = 1.0
 #       untracked string amplWeightsFile = "CalibCalorimetry/EcalTrivialCondModules/data/ampWeights_TB.txt"
 
        ## file with intercalib constants - same format used for online and offline DB
