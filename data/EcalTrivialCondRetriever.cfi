@@ -5,6 +5,7 @@ es_source = EcalTrivialConditionRetriever {
         untracked bool producedEcalGainRatios = true
         untracked bool producedEcalADCToGeVConstant = true
 	untracked bool producedEcalLaserCorrection = true
+	untracked bool producedChannelStatus = true
 
         untracked bool weightsForTB = false
 
@@ -18,8 +19,11 @@ es_source = EcalTrivialConditionRetriever {
         untracked double laserAPDPNMean = 1.0
 #       untracked string amplWeightsFile = "CalibCalorimetry/EcalTrivialCondModules/data/ampWeights_TB.txt"
 
-       ## file with intercalib constants - same format used for online and offline DB
-       # by default set all inter calib const to 1.0 if no file provided
-       untracked string  intercalibConstantsFile = ""
+        # channel status
+        untracked string  channelStatusFile = ""
+ 
+        ## file with intercalib constants - same format used for online and offline DB
+        # by default set all inter calib const to 1.0 if no file provided
+        untracked string  intercalibConstantsFile = ""
 
 }
