@@ -27,6 +27,9 @@ es_source = EcalTrivialConditionRetriever
         untracked string  intercalibConstantsFile = ""
         untracked string  intercalibErrorsFile = ""
 
+        untracked double adcToGeVEBConstant = 0.035
+        untracked double adcToGeVEEConstant = 0.060
+
         #mapping file    
         untracked string  mappingFile = "CalibCalorimetry/EcalTrivialCondModules/data/EEMap.txt"
 
