@@ -1,4 +1,5 @@
-es_source = EcalTrivialConditionRetriever {
+es_source = EcalTrivialConditionRetriever 
+{
         untracked bool producedEcalWeights = true
         untracked bool producedEcalPedestals = true
         untracked bool producedEcalIntercalibConstants = true
@@ -7,6 +8,7 @@ es_source = EcalTrivialConditionRetriever {
         untracked bool producedEcalADCToGeVConstant = true
 	untracked bool producedEcalLaserCorrection = true
 	untracked bool producedChannelStatus = true
+	untracked bool producedEcalMappingElectronics = true
 
         untracked bool weightsForTB = false
 
@@ -24,6 +26,12 @@ es_source = EcalTrivialConditionRetriever {
         # by default set all inter calib const to 1.0 if no file provided
         untracked string  intercalibConstantsFile = ""
         untracked string  intercalibErrorsFile = ""
+
+        untracked double adcToGeVEBConstant = 0.035
+        untracked double adcToGeVEEConstant = 0.060
+
+        #mapping file    
+        untracked string  mappingFile = "CalibCalorimetry/EcalTrivialCondModules/data/EEMap.txt"
 
         # channel status
         untracked string  channelStatusFile = ""
