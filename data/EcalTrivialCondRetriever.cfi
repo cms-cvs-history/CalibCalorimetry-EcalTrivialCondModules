@@ -25,6 +25,9 @@ es_source = EcalTrivialConditionRetriever {
         untracked string  intercalibConstantsFile = ""
         untracked string  intercalibErrorsFile = ""
 
+        untracked double adcToGeVEBConstant = 0.035
+        untracked double adcToGeVEEConstant = 0.060
+
         # channel status
         untracked string  channelStatusFile = ""
 }
