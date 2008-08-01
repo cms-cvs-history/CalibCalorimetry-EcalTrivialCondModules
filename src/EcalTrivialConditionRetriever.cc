@@ -1,5 +1,5 @@
 //
-// $Id: EcalTrivialConditionRetriever.cc,v 1.29 2008/02/20 14:08:46 meridian Exp $
+// $Id: EcalTrivialConditionRetriever.cc,v 1.29.2.1 2008/07/31 08:35:18 meridian Exp $
 // Created: 2 Mar 2006
 //          Shahram Rahatlou, University of Rome & INFN
 //
@@ -1289,12 +1289,22 @@ EcalTrivialConditionRetriever::getChannelStatusFromConfiguration (const EcalChan
   }
   
   std::string EcalSubDet;
+  std::string str;
   int hashIndex(0);
   int status(0);
   
   while (!statusFile.eof()) 
     {
-      statusFile >> EcalSubDet >> hashIndex >> status;
+      statusFile >> EcalSubDet;
+      if (EcalSubDet!=std::string("EB") && EcalSubDet!=std::string("EE"))
+	{
+	  std::getline(statusFile,str);
+	  continue;
+	}
+      else
+	{
+	  statusFile>> hashIndex >> status;
+	}
       // std::cout << EcalSubDet << " " << hashIndex << " " << status;
       
       if(EcalSubDet==std::string("EB"))
