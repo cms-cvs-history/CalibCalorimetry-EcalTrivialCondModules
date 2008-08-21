@@ -1,11 +1,11 @@
 import FWCore.ParameterSet.Config as cms
 
 EcalTrivialConditionRetriever = cms.ESSource("EcalTrivialConditionRetriever",
-    producedChannelStatus = cms.untracked.bool(True),
     #       Values to get correct noise on RecHit amplitude using 3+5 weights
     EBpedRMSX12 = cms.untracked.double(1.26),
     weightsForTB = cms.untracked.bool(False),
     # channel status
+    producedEcalChannelStatus = cms.untracked.bool(True),
     channelStatusFile = cms.untracked.string(''),
     producedEcalPedestals = cms.untracked.bool(True),
     #       If set true reading optimized weights (3+5 weights) from file 

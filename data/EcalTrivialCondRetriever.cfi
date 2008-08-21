@@ -6,7 +6,7 @@ es_source = EcalTrivialConditionRetriever {
         untracked bool producedEcalGainRatios = true
         untracked bool producedEcalADCToGeVConstant = true
 	untracked bool producedEcalLaserCorrection = true
-	untracked bool producedChannelStatus = true
+	untracked bool producedEcalChannelStatus = true
 
         untracked bool weightsForTB = false
 
