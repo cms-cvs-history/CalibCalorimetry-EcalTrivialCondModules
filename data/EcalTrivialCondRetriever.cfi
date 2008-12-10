@@ -10,6 +10,12 @@ es_source = EcalTrivialConditionRetriever
 	untracked bool producedChannelStatus = true
 	untracked bool producedEcalMappingElectronics = true
 
+	untracked bool producedEcalClusterLocalContCorrParameters = true
+	untracked bool producedEcalClusterCrackCorrParameters = true
+
+        untracked vdouble localContCorrParameters = { }
+        untracked vdouble crackCorrParameters = { }
+
         untracked bool weightsForTB = false
 
 #       If set true reading optimized weights (3+5 weights) from file 
