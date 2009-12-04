@@ -1,5 +1,5 @@
 //
-// $Id: EcalTrivialConditionRetriever.cc,v 1.40 2009/05/14 09:07:11 fra Exp $
+// $Id: EcalTrivialConditionRetriever.cc,v 1.41 2009/06/24 09:46:07 fra Exp $
 // Created: 2 Mar 2006
 //          Shahram Rahatlou, University of Rome & INFN
 //
@@ -866,16 +866,16 @@ EcalTrivialConditionRetriever::produceEcalLaserAPDPNRatios( const EcalLaserAPDPN
   EcalLaserAPDPNRatios::EcalLaserTimeStamp TimeStamp;
   //  for(int i=1; i<=92; i++){
   for(int i=0; i<92; i++){
-    TimeStamp.t1 = laserAPDPNTime1_;
+    TimeStamp.t1 = Timestamp(laserAPDPNTime1_);
     if(laserAPDPNTime2_ == 0 ){ 
-      TimeStamp.t2 = edm::Timestamp::endOfTime().value();
+      TimeStamp.t2 = Timestamp(edm::Timestamp::endOfTime().value());
     } else {
-      TimeStamp.t2 = laserAPDPNTime2_;
+      TimeStamp.t2 = Timestamp(laserAPDPNTime2_);
     }
     if(laserAPDPNTime3_ == 0 ){ 
-      TimeStamp.t3 = edm::Timestamp::endOfTime().value();
+      TimeStamp.t3 = Timestamp(edm::Timestamp::endOfTime().value());
     } else {
-      TimeStamp.t3 = laserAPDPNTime3_;
+      TimeStamp.t3 = Timestamp(laserAPDPNTime3_);
     }
 
     ical->setTime( i, TimeStamp );
